@@ -1,35 +1,17 @@
-/* Fade on scroll */
-const fades = document.querySelectorAll('.fade');
-
+/* Fade */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
+  entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+});
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+/* Cursor */
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
 
-fades.forEach(el => observer.observe(el));
-
-/* Modal */
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modalTitle');
-const modalDesc = document.getElementById('modalDesc');
-const closeModal = document.getElementById('closeModal');
-
-document.querySelectorAll('.work-item').forEach(item => {
-  item.addEventListener('click', () => {
-    modalTitle.textContent = item.dataset.title;
-    modalDesc.textContent = item.dataset.desc;
-    modal.style.display = 'flex';
-  });
-});
-
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-/* Theme toggle */
-document.getElementById('themeToggle').addEventListener('click', () => {
+/* Theme */
+document.getElementById('themeToggle').onclick = () => {
   document.body.classList.toggle('light');
-});
+};
