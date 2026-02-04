@@ -1,83 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Your Name — Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Your Name | Designer Portfolio" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="noise"></div>
 <button id="themeToggle">◐</button>
+<div id="cursor"></div>
 
-<header class="hero fade">
-  <h1>Your Name</h1>
-  <p class="tagline">Web Designer / Art Direction</p>
+<header class="hero">
+  <span class="eyebrow">Portfolio</span>
+  <h1>Your<br>Name</h1>
+  <p>Web Designer / Art Direction</p>
 </header>
 
-<main>
+<section class="intro fade">
+  <p>
+    機能ではなく、<br>
+    <strong>空気感と印象</strong>から設計するデザイン。
+  </p>
+</section>
 
-  <section class="intro fade">
-    <p>
-      情報を削ぎ落とし、<br>
-      本質が一瞬で伝わるデザインを制作しています。
-    </p>
-  </section>
+<section class="works-section">
+  <h2 class="fade">Selected Works</h2>
 
-  <section class="works-section">
-    <h2 class="fade">Selected Works</h2>
-
-    <div class="works-grid">
-
-      <div class="work-item fade"
-        data-title="Portfolio Site"
-        data-desc="Personal project / Design & Frontend">
-        <img src="images/work1.jpg" alt="">
-      </div>
-
-      <div class="work-item fade"
-        data-title="Landing Page"
-        data-desc="Client work / Art Direction">
-        <img src="images/work2.jpg" alt="">
-      </div>
-
-      <div class="work-item fade"
-        data-title="Brand Site"
-        data-desc="Concept design / UI">
-        <img src="images/work3.jpg" alt="">
-      </div>
-
+  <div class="works-grid">
+    <div class="work-item fade" data-title="Portfolio Site">
+      <img src="images/work1.jpg">
     </div>
-  </section>
+    <div class="work-item fade" data-title="Landing Page">
+      <img src="images/work2.jpg">
+    </div>
+    <div class="work-item fade" data-title="Brand Site">
+      <img src="images/work3.jpg">
+    </div>
+  </div>
+</section>
 
-  <section class="profile fade">
-    <h2>Profile</h2>
-    <p>
-      Webデザイナーとして構成設計からビジュアル制作まで担当。
-      Figmaを軸に、余白とタイポグラフィを重視した設計を行っています。
-    </p>
-  </section>
-
-  <section class="contact fade">
-    <h2>Contact</h2>
-    <p>your@email.com</p>
-  </section>
-
-</main>
+<section class="profile fade">
+  <h2>Profile</h2>
+  <p>
+    Figmaを起点に、構成・余白・視線誘導までを一貫して設計。
+    情報を削ぎ落とし、記憶に残る体験を目指しています。
+  </p>
+</section>
 
 <footer>
-  <p>© 2026 Your Name</p>
+  © 2026 Your Name
 </footer>
-
-<!-- Modal -->
-<div id="modal">
-  <div class="modal-content">
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
-    <span id="closeModal">×</span>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
