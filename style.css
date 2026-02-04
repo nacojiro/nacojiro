@@ -1,11 +1,29 @@
+/* =========================
+   Theme
+========================= */
 :root {
   --bg: #ffffff;
   --text: #0f172a;
   --muted: #64748b;
   --accent: #2563eb;
   --border: #e5e7eb;
+  --card: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --border: #1f2937;
+    --card: #0f172a;
+  }
+}
+
+/* =========================
+   Base
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -16,23 +34,26 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.8;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Hero */
+/* =========================
+   Hero
+========================= */
 .hero {
-  padding: 5rem 1.5rem 4rem;
+  padding: 6rem 1.5rem 5rem;
   text-align: center;
 }
 
 .hero-sub {
   color: var(--accent);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin: 0.5rem 0;
 }
 
@@ -40,82 +61,105 @@ body {
   color: var(--muted);
 }
 
-/* Layout */
+/* =========================
+   Layout
+========================= */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
   border-bottom: 2px solid var(--border);
   display: inline-block;
 }
 
-/* Skills */
+/* =========================
+   Skills
+========================= */
 .skills {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .skills li {
-  background: #f1f5f9;
-  padding: 0.4rem 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.45rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
 }
 
-/* Works */
+/* =========================
+   Works
+========================= */
 .works {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
 .work-card {
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.work-card h3 {
-  margin-top: 0;
-}
-
-.work-card p {
-  color: var(--muted);
-}
-
-.work-card a {
+  border-radius: 1rem;
+  overflow: hidden;
   text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contact */
+.work-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work-info {
+  padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.work-info h3 {
+  margin: 0;
+}
+
+.work-info p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Hover animation */
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.work-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   Contact & Footer
+========================= */
 .contact {
   font-weight: 500;
+  font-size: 1.05rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
