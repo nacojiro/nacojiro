@@ -1,8 +1,9 @@
 :root {
   --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
+  --text: #0f172a;
+  --muted: #64748b;
   --accent: #2563eb;
+  --border: #e5e7eb;
 }
 
 * {
@@ -17,66 +18,105 @@ body {
   line-height: 1.8;
 }
 
-.site-header {
-  padding: 4rem 1.5rem 3rem;
+/* Hero */
+.hero {
+  padding: 5rem 1.5rem 4rem;
   text-align: center;
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.hero-sub {
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
-.subtitle {
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
+}
+
+.hero-text {
   color: var(--muted);
-  margin-top: 0.5rem;
 }
 
-main {
-  max-width: 800px;
+/* Layout */
+.container {
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 h2 {
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+  display: inline-block;
 }
 
+/* Skills */
 .skills {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0;
-  list-style: none;
 }
 
 .skills li {
-  background: #f3f4f6;
-  padding: 0.3rem 0.8rem;
+  background: #f1f5f9;
+  padding: 0.4rem 0.9rem;
   border-radius: 999px;
   font-size: 0.9rem;
 }
 
-.works article {
-  padding: 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
+/* Works */
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
-.works a {
-  color: var(--accent);
+.work-card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.work-card h3 {
+  margin-top: 0;
+}
+
+.work-card p {
+  color: var(--muted);
+}
+
+.work-card a {
   text-decoration: none;
+  color: var(--accent);
   font-weight: 500;
 }
 
-footer {
+/* Contact */
+.contact {
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--muted);
+  border-top: 1px solid var(--border);
   font-size: 0.9rem;
 }
