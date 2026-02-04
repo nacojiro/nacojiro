@@ -9,37 +9,47 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="hero">
+  <p class="hero-sub">Portfolio</p>
   <h1>Your Name</h1>
-  <p class="subtitle">Web Developer / Designer</p>
+  <p class="hero-text">
+    シンプルで使いやすいWebサイトを制作します。
+  </p>
 </header>
 
-<main>
+<main class="container">
+
   <section>
     <h2>About</h2>
     <p>
-      Web制作・フロントエンド中心に開発しています。
-      HTML / CSS / JavaScript を使った静的サイト構築が得意です。
+      HTML / CSS を中心に、見やすく・分かりやすいデザインを意識して制作しています。
+      個人サイトやポートフォリオ、LP制作が得意です。
     </p>
   </section>
 
   <section>
     <h2>Skills</h2>
     <ul class="skills">
-      <li>HTML / CSS</li>
-      <li>JavaScript</li>
-      <li>Git / GitHub</li>
+      <li>HTML</li>
+      <li>CSS</li>
       <li>Responsive Design</li>
+      <li>Git / GitHub</li>
     </ul>
   </section>
 
   <section>
     <h2>Works</h2>
     <div class="works">
-      <article>
-        <h3>Sample Project</h3>
-        <p>ポートフォリオ用のサンプルプロジェクト。</p>
-        <a href="#" target="_blank">View</a>
+      <article class="work-card">
+        <h3>Sample Portfolio</h3>
+        <p>HTML / CSSのみで制作したポートフォリオサイト。</p>
+        <a href="#" target="_blank">View Site</a>
+      </article>
+
+      <article class="work-card">
+        <h3>Landing Page</h3>
+        <p>シンプルで読みやすさを重視したLPデザイン。</p>
+        <a href="#" target="_blank">View Site</a>
       </article>
     </div>
   </section>
@@ -47,12 +57,16 @@
   <section>
     <h2>Contact</h2>
     <p>
-      Email: your@email.com
+      ご連絡は以下のメールアドレスまでお願いします。
+    </p>
+    <p class="contact">
+      your@email.com
     </p>
   </section>
+
 </main>
 
-<footer>
+<footer class="footer">
   <p>© 2026 Your Name</p>
 </footer>
 
