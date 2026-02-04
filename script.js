@@ -1,4 +1,4 @@
-/* Scroll fade */
+/* Fade on scroll */
 const fades = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(entries => {
@@ -15,6 +15,7 @@ fades.forEach(el => observer.observe(el));
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
+const closeModal = document.getElementById('closeModal');
 
 document.querySelectorAll('.work-item').forEach(item => {
   item.addEventListener('click', () => {
@@ -24,12 +25,11 @@ document.querySelectorAll('.work-item').forEach(item => {
   });
 });
 
-document.getElementById('closeModal').onclick = () => {
+closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
-};
+});
 
 /* Theme toggle */
-const toggle = document.getElementById('themeToggle');
-toggle.onclick = () => {
+document.getElementById('themeToggle').addEventListener('click', () => {
   document.body.classList.toggle('light');
-};
+});
