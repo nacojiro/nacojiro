@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Your Name — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Your Name | Designer Portfolio" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,30 +16,59 @@
   <p class="tagline">Web Designer / Art Direction</p>
 </header>
 
-<section class="intro fade">
-  <p>
-    視覚と構造のバランスを重視した<br>
-    ミニマルデザインを制作しています。
-  </p>
-</section>
+<main>
 
-<section class="works-section">
-  <h2 class="fade">Selected Works</h2>
+  <section class="intro fade">
+    <p>
+      情報を削ぎ落とし、<br>
+      本質が一瞬で伝わるデザインを制作しています。
+    </p>
+  </section>
 
-  <div class="works-grid">
-    <div class="work-item fade" data-title="Portfolio Site" data-desc="Personal project / Design & Frontend">
-      <img src="images/work1.jpg">
+  <section class="works-section">
+    <h2 class="fade">Selected Works</h2>
+
+    <div class="works-grid">
+
+      <div class="work-item fade"
+        data-title="Portfolio Site"
+        data-desc="Personal project / Design & Frontend">
+        <img src="images/work1.jpg" alt="">
+      </div>
+
+      <div class="work-item fade"
+        data-title="Landing Page"
+        data-desc="Client work / Art Direction">
+        <img src="images/work2.jpg" alt="">
+      </div>
+
+      <div class="work-item fade"
+        data-title="Brand Site"
+        data-desc="Concept design / UI">
+        <img src="images/work3.jpg" alt="">
+      </div>
+
     </div>
+  </section>
 
-    <div class="work-item fade" data-title="Landing Page" data-desc="Client work / Art Direction">
-      <img src="images/work2.jpg">
-    </div>
+  <section class="profile fade">
+    <h2>Profile</h2>
+    <p>
+      Webデザイナーとして構成設計からビジュアル制作まで担当。
+      Figmaを軸に、余白とタイポグラフィを重視した設計を行っています。
+    </p>
+  </section>
 
-    <div class="work-item fade" data-title="Brand Site" data-desc="Concept design">
-      <img src="images/work3.jpg">
-    </div>
-  </div>
-</section>
+  <section class="contact fade">
+    <h2>Contact</h2>
+    <p>your@email.com</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Your Name</p>
+</footer>
 
 <!-- Modal -->
 <div id="modal">
